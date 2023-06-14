@@ -1,7 +1,14 @@
+from configparser import ConfigParser
 from tkinter import *
 import requests
 import json
 from datetime import datetime
+
+#function to fetch API key
+def _get_api_key():
+    config = ConfigParser()
+    config.read('secrets.ini')
+    return['weather']['api_key']
 
 #Initialize the Tkinter window
 root = Tk()
@@ -13,7 +20,7 @@ root.title("Weather App by Rishabh") #title of the window
 city_value = StringVar()
 
 def showWeather():
-    key = "79313bad8f2548ebb94142827231306" #WeatherAPI API-Key
+    key = _get_api_key() #WeatherAPI API-Key
     city_name = city_value.get()
     weather_url = "http://api.weatherapi.com/v1/current.json?key=" + key + "&q=" + city_name
     response = requests.get(weather_url) #Get response from the URL
