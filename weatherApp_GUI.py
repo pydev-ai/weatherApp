@@ -7,8 +7,8 @@ from datetime import datetime
 #function to fetch API key
 def _get_api_key():
     config = ConfigParser()
-    config.read('secrets.ini')
-    return['weather']['api_key']
+    config.read("D:\Projects\Weather App\secrets.ini")
+    return config['weather']["api_key"]
 
 #Initialize the Tkinter window
 root = Tk()
