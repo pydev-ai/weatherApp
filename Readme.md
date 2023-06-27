@@ -1,4 +1,4 @@
-The weather App is available in both CLI and GUI formats. Made using Tkinter and Python requests library to fetch weather data to display it locally using a Graphical Interface. 
+Made using Tkinter and Python requests library to fetch weather data to display it locally using a Graphical Interface. The weather App is available in both CLI and GUI formats. 
 
 1. When using the CLI version, enter the name of the city once the code execution halts. 
 2. When using the GUI version, enter the name of the city in the provided space and hit 'Check Weather' botton.
