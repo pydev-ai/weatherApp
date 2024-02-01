@@ -2,6 +2,7 @@ from configparser import ConfigParser
 import requests
 import json
 
+#helped by a friend
 def _get_api_key():
     config = ConfigParser()
     config.read("D:\Projects\Weather App\secrets.ini")
